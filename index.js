@@ -1,7 +1,13 @@
+//note to self
+// get a specific books characters -> data[0]["characters"]
+//get 5th book in series data[5]
+//get number of books data["length"]
+//get the 1031st character in the series data[4]["characters"][1031]
+
 function fetchBooks() {
   return fetch("https://anapioficeandfire.com/api/books")
     .then((resp) => resp.json())
-    .then((json) => renderBooks(json));
+    .then((data) => renderBooks(data));
 }
 
 function renderBooks(books) {
